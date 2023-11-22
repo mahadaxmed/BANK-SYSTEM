@@ -28,7 +28,7 @@ model Account {
   accNumber  Int @id @default(autoincrement())
   user_id Int
   accType String
-  balance Decimal? @default(100)
+  balance Decimal @default(100)
   user User @relation(fields: [user_id], references: [id])
 
   transaction Transaction[]
