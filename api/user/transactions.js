@@ -2,7 +2,7 @@ import { Router } from "express";
 
 const router = Router();
 
-//____________get all Transactions
+//_____________get all Transactions
 router.get("/", async (req, res) => {
   try {
     const transaction = await prisma.transaction.findMany();
