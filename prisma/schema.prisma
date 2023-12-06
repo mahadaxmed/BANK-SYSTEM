@@ -36,13 +36,13 @@ model Account {
 }
 
 model Transaction {
-  id  Int @id @default(autoincrement())
-  user_id Int
-  acc_num Int
+  Trid  Int @id @default(autoincrement())
+  user_id Int?
+  acc_number Int? 
   transType String
   amount Decimal
-  user User @relation(fields: [user_id], references: [id])
-  account Account @relation(fields: [acc_num], references: [accNumber])
+  user User? @relation(fields: [user_id], references: [id])
+  account Account? @relation(fields: [acc_number], references: [accNumber])
 }
 
 model Transfer {
