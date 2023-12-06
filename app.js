@@ -5,10 +5,10 @@ const app = express();
 app.use(json());
 
 // routes
-import adminRouterUser from "./api/admin/adminUsers";
-import adminRouterTrans from "./api/admin/transactions";
-import adminRouterAcc from "./api/admin/adminAcc";
-import users from "./api/user/transactions";
+import adminRouterUser from "./api/admin/adminUsers.js";
+import adminRouterTrans from "./api/admin/transactions.js";
+import adminRouterAcc from "./api/admin/adminAcc.js";
+import users from "./api/user/transactions.js";
 
 app.use("/admin/users", adminRouterUser);
 app.use("/admin/accounts", adminRouterAcc);
