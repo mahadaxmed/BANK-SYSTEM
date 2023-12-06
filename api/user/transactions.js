@@ -1,6 +1,6 @@
-const express = require("express");
+import { Router } from "express";
 
-const router = express.Router();
+const router = Router();
 
 //____________get all Transactions
 router.get("/", async (req, res) => {
@@ -181,4 +181,4 @@ router.put("/withdraw/:id", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

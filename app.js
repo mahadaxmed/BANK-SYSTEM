@@ -1,17 +1,14 @@
-const express = require("express");
-const { json } = require("express");
-const bodyParse = require("body-parser");
+import express from "express";
+import { json } from "express";
 
 const app = express();
 app.use(json());
 
 // routes
-const adminRouterUser = require("./api/admin/adminUsers");
-const adminRouterTrans = require("./api/admin/transactions");
-const adminRouterAcc = require("./api/admin/adminAcc");
-const users = require("./api/user/transactions");
-const bodyParser = require("body-parser");
-const { join } = require("@prisma/client/runtime/library");
+import adminRouterUser from "./api/admin/adminUsers";
+import adminRouterTrans from "./api/admin/transactions";
+import adminRouterAcc from "./api/admin/adminAcc";
+import users from "./api/user/transactions";
 
 app.use("/admin/users", adminRouterUser);
 app.use("/admin/accounts", adminRouterAcc);

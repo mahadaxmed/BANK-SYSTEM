@@ -1,7 +1,7 @@
-const express = require("express");
-const prisma = require("../lib/index").default;
+import { Router } from "express";
+import prisma from "../lib/index";
 
-const router = express.Router();
+const router = Router();
 
 router.get("/", async (req, res) => {
   try {
@@ -142,4 +142,4 @@ router.put("/", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
