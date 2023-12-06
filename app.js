@@ -5,6 +5,7 @@ const bodyParse = require("body-parser");
 const app = express();
 app.use(json());
 
+// routes
 const adminRouterUser = require("./api/admin/adminUsers");
 const adminRouterTrans = require("./api/admin/transactions");
 const adminRouterAcc = require("./api/admin/adminAcc");
