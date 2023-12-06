@@ -1,5 +1,5 @@
 const express = require("express");
-const prisma = require("../lib/index");
+const prisma = require("../lib/index").default;
 
 const router = express.Router();
 
